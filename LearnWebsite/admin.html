@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - LearnWebsite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Admin Dashboard</div>
+            <div class="nav-links">
+                <span id="adminName"></span>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-panel">
+            <div class="upload-section">
+                <h2>Upload New Video</h2>
+                <form id="uploadForm">
+                    <input type="text" name="title" placeholder="Video Title" required>
+                    <textarea name="description" placeholder="Video Description"></textarea>
+                    <input type="file" name="video" accept="video/*" required>
+                    <button type="submit">Upload Video</button>
+                </form>
+            </div>
+
+            <div class="manage-videos">
+                <h2>Manage Videos</h2>
+                <div id="videosList"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">LearnWebsite</div>
+            <div class="nav-links">
+                <button id="loginBtn">Login</button>
+                <button id="registerBtn">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container" id="loginForm">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="form-container" id="registerForm">
+            <h2>Register</h2>
+            <form action="/register" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div class="upload-section" id="uploadSection">
+            <h2>Upload Video</h2>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="Video Title" required>
+                <textarea name="description" placeholder="Video Description"></textarea>
+                <input type="file" name="video" accept="video/*" required>
+                <button type="submit">Upload Video</button>
+            </form>
+        </div>
+
+        <div class="videos-grid" id="videosGrid">
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 LearnWebsite. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
